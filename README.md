@@ -35,5 +35,6 @@ $ wget -O - https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/refs/h
 Please note down the VM public IP address in multipass GUI, then run the setup for master node
 
 ```shell
-
+$ export MASTER_IP=<public-ip-of-VM>
+$ wget -O - https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/dcf8671f0339e66d2dca0c04782a336e337900bb/kubeadm/master.sh | bash
 ```
