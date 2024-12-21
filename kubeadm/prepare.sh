@@ -36,8 +36,8 @@ EOF
 sudo sysctl --system
 
 # Disable AppArmor before install and start containerd, this will help containerd to work properly with Flannel CNI
-systemctl stop apparmor
-systemctl disable apparmor
+sudo systemctl stop apparmor
+sudo systemctl disable apparmor
 
 # Install containerd
 sudo apt-get update
