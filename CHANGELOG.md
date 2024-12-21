@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.1.0 (KubeConfig edition)
+- Add config copy guide
+
 ## v1.0.2 (KubeadmFix edition)
 - Add sudo when call systemctl
 

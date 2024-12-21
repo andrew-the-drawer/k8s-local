@@ -44,3 +44,11 @@ The output after running `master.sh` script in master VM will contain a `kubeadm
 ```shell
 kubeadm join <master-ip>:6443 --token ... --discovery-token-ca-cert-hash ...
 ```
+
+To access the cluster using kubectl, let's do the following. In the Macbook containing master VM
+
+```shell
+$ multipass transfer <vm-name>:/home/ubuntu/.kube/config ~/.kube/config-local
+```
+
+Use the `~/.kube/config-local` config to connect to the cluster from anywhere in the same LAN
