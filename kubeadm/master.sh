@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Read input from the user (interactively) which is the public IP address of the master node
-read -p "Enter the public IP address of the master node: " MASTER_IP
+if [ -t 0 ]; then
+  read -p "Enter the public IP address of the master node: " MASTER_IP
+else
+  echo "Enter the public IP address of the master node: "
+  read MASTER_IP
+fi
 
 # Run `kubeadm init` with that IP address
 # the `--pod-network-cidr` is always 10.224.0.0/16 as it is required for Flannel CNI (0.26.2) default config
