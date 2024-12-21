@@ -29,6 +29,11 @@ $ multipass shell <vm-name>
 Do installation in the VMs:
 
 ```shell
-$ wget
+$ wget -O - https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/refs/heads/main/kubeadm/prepare.sh | bash
 ```
 
+Please note down the VM public IP address in multipass GUI, then run the setup for master node
+
+```shell
+
+```
