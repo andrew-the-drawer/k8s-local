@@ -36,7 +36,7 @@ Please note down the VM public IP address in multipass GUI, then run the setup f
 
 ```shell
 $ export MASTER_IP=<public-ip-of-VM>
-$ wget -O - https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/dcf8671f0339e66d2dca0c04782a336e337900bb/kubeadm/master.sh | bash
+$ wget -O - https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/refs/heads/main/kubeadm/master.sh | bash
 ```
 
 The output after running `master.sh` script in master VM will contain a `kubeadm join` script. Copy and run that in the worker VM (in another computer).
