@@ -52,3 +52,6 @@ sudo containerd config default | sudo tee /etc/containerd/config.toml
 # Configure containerd to use systemd as cgroup driver
 sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
 
+
+# restart containerd as we just changed the configuration
+sudo systemctl restart containerd

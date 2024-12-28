@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.3 (AddressBindKubelet edition)
+- Bind the address of kubelet to enp0s2
+- Restart the containerd after system change (small fix for prepare.sh script)
+
 ## v1.1.2 (FlannelFix edition)
 - Fix the kube-flannel link
 
