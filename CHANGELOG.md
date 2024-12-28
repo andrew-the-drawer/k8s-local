@@ -1,6 +1,9 @@
 # Changelog
 
-## v1.1.1 (Flannel interface edition)
+## v1.1.2 (FlannelFix edition)
+- Fix the kube-flannel link
+
+## v1.1.1 (FlannelInterface edition)
 - Use a customized network interface enp0s2 (LAN interface) to allow worker node connectivity via public LAN IP address
 
 ## v1.1.0 (KubeConfig edition)
