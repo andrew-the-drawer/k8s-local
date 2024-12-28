@@ -13,7 +13,7 @@ wget -O - kubeadm-config.yml https://raw.githubusercontent.com/andrew-the-drawer
 sed -i "s/<IP-OF-ENP0S2>/$MASTER_IP/g" ./kubeadm-config.yml
 
 # Run `kubeadm init`
-sudo kubeadm init --config kubeadm-config.yml
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=$MASTER_IP --config=./kubeadm-config.yml
 mkdir -p $HOME/.kube
 sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config

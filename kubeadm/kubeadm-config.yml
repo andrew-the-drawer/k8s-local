@@ -1,12 +1,6 @@
 apiVersion: kubeadm.k8s.io/v1beta4
 kind: InitConfiguration
-localAPIEndpoint:
-  advertiseAddress: <IP-OF-ENP0S2> # Replace with your enp0s2 IP
 nodeRegistration:
   kubeletExtraArgs:
-    node-ip: <IP-OF-ENP0S2> # Replace with your enp0s2 IP
----
-apiVersion: kubeadm.k8s.io/v1beta4
-kind: ClusterConfiguration
-networking:
-  podSubnet: "10.244.0.0/16"     #the `--pod-network-cidr` is always 10.224.0.0/16 as it is required for Flannel CNI (0.26.2) default config
+    node-ip: <IP-OF-ENP0S2>
+
