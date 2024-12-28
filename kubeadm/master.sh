@@ -15,5 +15,5 @@ mkdir -p $HOME/.kube
 sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-# Install Flannel CNI, version 0.26.2 (latest at that time)
-kubectl apply -f https://github.com/flannel-io/flannel/releases/download/v0.26.2/kube-flannel.yml
+# Install Flannel CNI, our custom version
+kubectl apply -f https://raw.githubusercontent.com/andrew-the-drawer/k8s-local/refs/heads/main/kubeadm/kubeadm/kube-flannel.yml

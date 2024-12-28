@@ -52,3 +52,13 @@ $ multipass transfer <vm-name>:/home/ubuntu/.kube/config ~/.kube/config-local
 ```
 
 Use the `~/.kube/config-local` config to connect to the cluster from anywhere in the same LAN
+
+#### Check new kube-flannel
+
+```shell
+# curl from flannel-io release the latest kube-flannel template, output to kubeadm/kube-flannel.yml
+
+$ curl -o kubeadm/kube-flannel.yml https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+```
+
+Find the container `kube-flannel` in the `DaemonSet` config and add the `--iface=enp0s2` to the `args` options
